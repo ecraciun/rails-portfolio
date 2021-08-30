@@ -6,10 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+3.times do |topic|
+    Topic.create!(
+        title: "Topic #{topic + 1}"
+    )
+end
+
+puts "3 topics created"
+
+
 10.times do |blog|
     Blog.create!(
         title: "My Blog Post #{blog + 1}",
-        body: "This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values."
+        body: "This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.This file should contain all the record creation needed to seed the database with its default values.",
+        topic_id: Topic.last.id
     )
 end
 
