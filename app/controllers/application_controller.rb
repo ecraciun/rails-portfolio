@@ -15,7 +15,7 @@ end
 module MiliCopyViewTool
   class Renderer
     def self.copyright(name, message)
-      "&copy #{Time.now.year} | <b>#{name}</b> #{message}".html_safe
+      "<p>&copy #{Time.now.year} | <b>#{name}</b> #{message}</p>".html_safe
     end
   end
 end

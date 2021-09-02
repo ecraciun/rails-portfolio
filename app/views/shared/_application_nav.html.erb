@@ -1,0 +1,14 @@
+<header class="masthead mb-auto">
+  <div class="inner">
+    <h3 class="masthead-brand">Rails Portfolio by EC</h3>
+    <nav class="nav nav-masthead justify-content-center">
+      <%= link_to "Home", root_path, class:"nav-link" %>
+      <%= link_to "Blogs", blogs_path, class:"nav-link" %>
+      <%= link_to "Portfolio", portfolios_path, class:"nav-link" %>
+      <%= link_to "About", about_path, class:"nav-link" %>
+      <%= link_to "Contact", contact_path, class:"nav-link" %>
+      <a href="/rails/info/routes" class="nav-link">ROUTES</a>
+      <%= login_helper "nav-link" %>
+    </nav>
+  </div>
+</header>
