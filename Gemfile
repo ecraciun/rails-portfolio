@@ -38,6 +38,10 @@ gem 'jquery-rails'
 
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
+
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
