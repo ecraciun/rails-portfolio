@@ -2,19 +2,22 @@
 <html>
   <head>
     <title><%= @page_title %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="<%= @seo_keywords %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render "shared/nav", location: "top" %>
-    <%= login_helper %>
-    <%= yield %>
+    <%= render "shared/portfolio_nav" %>
+    <main role="main">
+      <%= render "shared/portfolio_header" unless logged_in?(:site_admin) %>
+      <%= yield %>
+    </main>
     <% source_helper("portfolio") %>
+    <%= render "shared/portfolio_footer" %>
   </body>
 </html>
