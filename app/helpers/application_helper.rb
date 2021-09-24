@@ -46,6 +46,10 @@ module ApplicationHelper
         title: 'Contact'
       },
       {
+        url: tech_news_path,
+        title: 'Tech News'
+      },
+      {
         url: '/rails/info/routes',
         title: 'ROUTES'
       }
