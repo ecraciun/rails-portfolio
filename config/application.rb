@@ -37,6 +37,8 @@ module RailsPortfolio
     config.assets.paths << Rails.root.join('app', 'assets', 'videos')
     config.assets.check_precompiled_asset = false
 
+    config.eager_load_paths << Rails.root.join('lib')
+
     # config.action_controller.permit_all_parameters = true
   end
 end
