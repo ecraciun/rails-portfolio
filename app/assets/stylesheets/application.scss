@@ -41,7 +41,7 @@ body {
 }
 
 .cover-container {
-  max-width: 60em;
+  max-width: 65em;
 }
 
 /*
@@ -149,4 +149,18 @@ body {
 
 .app-footer {
   color: white;
+}
+
+.tech-news {
+  color: black;
+  margin: 20px;
+}
+
+.tech-news a {
+  color: green;
+}
+
+.tech-news > .card {
+  padding: 30px;
+  background-color: rgba($color: #ffffff, $alpha: 0.7);
 }
