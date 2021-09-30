@@ -4,6 +4,12 @@
     <p class="mb-0">Saw you downtown singing the Blues. Watch you circle the drain. Why don't you let me stop by? Heavy is the head that <em>wears the crown</em>. Yes, we make angels cry, raining down on earth from up above.</p>
   </div>
   <div class="p-4">
+    <h4>Topics</h4>
+    <% @side_bar_topics.each do |topic| %>
+      <p><%= link_to topic.title, topic_path(topic) %></p>
+    <% end %>
+  </div>
+  <div class="p-4">
     <h4 class="font-italic">Elsewhere</h4>
     <ol class="list-unstyled social-links">
       <li><a href="#"><%= fa_icon "github" %></a></li>
