@@ -3,7 +3,7 @@ class CommentBroadcastJob < ApplicationJob
 
   def perform(comment)
     temp = render_comment(comment)
-    channel = "blogs_#{comment.blog.id}_channel"
+    # channel = "blogs_#{comment.blog.id}_channel"
     # puts "###################### #{temp}"
     # puts "%%%%%%%%%%%% #{channel}"
     ActionCable.server.broadcast "blogs_#{comment.blog.id}_channel", { content: temp }
