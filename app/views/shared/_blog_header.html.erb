@@ -6,7 +6,12 @@
       <a class="blog-header-logo text-dark" href="#">My Blog</a>
     </div>
     <div class="col-4 d-flex justify-content-end align-items-center">
-      <%= link_to 'Write A New Blog', new_blog_path if logged_in?(:site_admin) %>
+      <span>
+        <%= link_to 'Write A New Blog', new_blog_path if logged_in?(:site_admin) %>
+      </span>
+      <span>
+        <%= link_to ' Topics', topics_path %>
+      </span>
     </div>
   </div>
 </header>
